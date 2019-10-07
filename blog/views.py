@@ -38,8 +38,8 @@ def blog_post_update_view(request, slug):
     form = BlogPostModelForm(request.POST or None, instance=obj)
     if form.is_valid():
         form.save()
-    template_name = 'form.html'
-    context = {'form': form, 'title': obj.title}
+    template_name = 'blog/form.html'
+    context = {"object": obj, 'form': form, 'title': obj.title}
     return render(request, template_name, context)
 
 
