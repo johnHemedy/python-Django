@@ -12,5 +12,5 @@ def search_view(request):
     if query is not None:
         SearchQuery.objects.create(user=user, query=query)
         blog_list = BlogPost.objects.search(query=query)
-        context["blog_list"] =  blog_list
+        context["blog_list"] = blog_list
     return render(request, "searches/view.html", context)

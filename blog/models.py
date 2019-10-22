@@ -57,5 +57,8 @@ class BlogPost(models.Model):
     def get_delete_url(self):
         return f'{self.get_absolute_url()}/delete'
 
+    def get_powerpoint_url(self):
+        return f'{self.get_absolute_url()}/powerpoint'
+
     class Meta:
         ordering = ['-publish_date', '-updated', '-timestamp']

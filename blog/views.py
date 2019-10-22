@@ -2,6 +2,8 @@ from django.contrib.admin.views.decorators import staff_member_required
 from django.shortcuts import render, get_object_or_404, redirect
 from .models import BlogPost
 from .forms import BlogPostModelForm
+from pptx import Presentation
+from .powerPt import blog_post_powerpoint
 
 
 def blog_post_list_view(request):
@@ -52,3 +54,6 @@ def blog_post_delete_view(request, slug):
         return redirect("/blog")
     context = {"object": obj}
     return render(request, template_name, context)
+
+
+
