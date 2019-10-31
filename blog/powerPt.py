@@ -121,7 +121,7 @@ def blog_post_powerpoint(request, slug):
     img_path = 'powerpoint/Camembert.png'
     picture_cell = table_second.cell(0, 1)
 
-   
+
 
     # write column headings
     # table.cell(0, 0).text = 'Foo'

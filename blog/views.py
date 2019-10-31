@@ -2,8 +2,6 @@ from django.contrib.admin.views.decorators import staff_member_required
 from django.shortcuts import render, get_object_or_404, redirect
 from .models import BlogPost
 from .forms import BlogPostModelForm
-from pptx import Presentation
-from .powerPt import blog_post_powerpoint
 
 
 def blog_post_list_view(request):
